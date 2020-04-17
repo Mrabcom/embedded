@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Control Tab</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Welcome to Ionic!</h2>
+  <ion-card>
+    <ion-card-header>
+      App Information
+    </ion-card-header>
+    <ion-card-content>
+      This app is used for controlling devices. 
+    </ion-card-content>
+  </ion-card>
+
+          <ion-list>
+              <ion-item>
+                <ion-label>LED 1</ion-label>
+                <ion-toggle (ionChange)="led1Changed()" [(ngModel)]="led1"></ion-toggle>
+              </ion-item>
+
+            
+              <ion-item>
+                <ion-label>LED 2</ion-label>
+                <ion-toggle (ionChange)="led2Changed()" [(ngModel)]="led2"></ion-toggle>
+              </ion-item>
+          </ion-list>
+
+          <ion-list>
+            <ion-item>
+              <ion-label>Motor 1 ({{motor1}} % Duty Cycle)</ion-label>
+              <ion-range min="0" max="100" (ionChange)="motor1Changed()" [(ngModel)]="motor1">
+                <ion-icon range-left small name="sunny"></ion-icon>
+                <ion-icon range-right name="sunny"></ion-icon>
+              </ion-range> 
+            </ion-item>
+            
+            <ion-item>
+              <ion-label>Angle 1 ({{angle1}} Degrees)</ion-label>
+              <ion-range min="0" max="180" (ionChange)="angle1Changed()" [(ngModel)]="angle1">
+                <ion-icon range-left small name="sunny"></ion-icon>
+                <ion-icon range-right name="sunny"></ion-icon>
+              </ion-range>
+            </ion-item>
+          </ion-list>
+
+        <button (click)="raiseEvent1()" ion-button block>Event 1</button>
+        <button (click)="raiseEvent2()" ion-button block>Event 2</button>
+        <button (click)="raiseEvent3()" ion-button block>Event 3</button>
+
+
+</ion-content>

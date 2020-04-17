@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Blindspot Tab
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card>
+
+    <ion-card-header>
+      App Information
+    </ion-card-header>
+    <ion-card-content>
+      This app is for the car blind spot detection
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      Left Side
+    </ion-card-header>
+    <ion-card-content>
+      {{leftside}}
+    </ion-card-content>
+
+  </ion-card>
+
+  
+
+  <ion-card>
+
+    <ion-card-header>
+     Right Side
+    </ion-card-header>
+    <ion-card-content>
+      {{rightside}}
+    </ion-card-content>
+
+  </ion-card>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-12>
+      <img width="30%" style="display:block; margin: auto" src="https://www.pikpng.com/pngl/m/77-774753_vector-clip-art-car-icon-top-view-png.png">
+    </ion-col>
+  </ion-row>
+    <ion-row>
+    <ion-col col-12> 
+   
+      <img *ngIf="leftside" width="30%"  style="float:left;" src="https://www.pikpng.com/pngl/m/77-774753_vector-clip-art-car-icon-top-view-png.png">
+      <img *ngIf="rightside" width="30%"  style="float:right;" src="https://www.pikpng.com/pngl/m/77-774753_vector-clip-art-car-icon-top-view-png.png">
+    </ion-col>
+
+  </ion-row>
+</ion-grid>
+ 
+    
+
+
+</ion-content>

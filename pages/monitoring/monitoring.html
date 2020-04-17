@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Monitoring Tab
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card>
+
+    <ion-card-header>
+      App Information
+    </ion-card-header>
+    <ion-card-content>
+      This app is used for monitoring devices too
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      {{oneTime1Name}} Reading
+    </ion-card-header>
+    <ion-card-content>
+      {{oneTime1Value}}  {{oneTime1Units}}
+    </ion-card-content>
+
+  </ion-card>
+
+  
+
+  <ion-card>
+
+    <ion-card-header>
+      {{oneTime2Name}} Reading
+    </ion-card-header>
+    <ion-card-content>
+      {{oneTime2Value}}  {{oneTime2Units}}
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <ion-card>
+
+    <ion-card-header>
+      {{oneTime3Name}} Reading
+    </ion-card-header>
+    <ion-card-content>
+      {{getMotionString()}} 
+    </ion-card-content>
+
+  </ion-card>
+
+  <div class="ion-padding">
+    <ion-card>
+      <ion-card-header>
+        Line Chart
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #lineCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>
